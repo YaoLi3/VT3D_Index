@@ -1,15 +1,9 @@
 <template>
   <div id="app">
     <header>
+      <component  :G_Atlas='G_Atlas' v-bind:is="selected"></component>
     </header>
-    <article>
-        <component  :G_Atlas='G_Atlas' v-bind:is="selected"></component>
-    </article>
-    <footer>
-      <hr>
-      <p>Any page issue or bug resport, please contact: guolidong@genomics.cn; liyao1@genomics.cn; </p>
-      <p> Powered by Element.js framework and Echarts.js library.</p>
-    </footer>
+    <!-- <footer><hr><p>Any page issue or bug resport, please contact: guolidong@genomics.cn; liyao1@genomics.cn; </p><p> Powered by Element.js framework and Echarts.js library.</p></footer> -->
   </div>
 </template>
 
@@ -19,10 +13,9 @@ import Element from 'element-ui'
 import locale from 'element-ui/lib/locale/lang/en'
 
 Vue.use(Element, { locale })
-import 'element-theme-dark';
+//import 'element-theme-dark';
 
 import Home from "./Home.vue"
-import Viewer from "./Viewer.vue"
 
 export default {
   data() {
@@ -33,7 +26,6 @@ export default {
   },
   components:{
      Home,
-     Viewer,
   },
   methods: {
       InitSummary(jsondata){
@@ -75,11 +67,5 @@ export default {
 }
 hr{
     border:2px solid #ccc;
-}
-header{
-    position: sticky;
-    z-index: 999;
-    top: 0;
-    margin-bottom: 8px;
 }
 </style>
