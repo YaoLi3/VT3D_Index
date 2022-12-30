@@ -1,11 +1,18 @@
 <template>
 <div>
+    <header id='header'>
+        <el-row id='header-row'>
+          <el-col id='header-col1' :span="6">VT3D</el-col>
+          <el-col id='header-col2' :span="6"><img ></el-col>
+        </el-row>
+    </header>
+
+
     <el-container>
-        <el-header>
-            VT3D
-        </el-header>
+        <!-- <el-header>VT3D</el-header> -->
         
         <el-main>
+        <div id='canvas'>
             <el-row :gutter="20">
                 <el-col :span="6"><div class="grid-content bg-purple">
                     test1
@@ -30,9 +37,10 @@
                     <a href="/vt3d_example/L2_a/index.html?atlas=/vt3d_example/L2_a" target="_blank">L2_a</a > 
                 </div></el-col>
             </el-row>
+        </div>
         </el-main>
        
-        <el-footer style='font-size: 12px'>
+        <el-footer>
             <div class='footer'>
                 <p>For any inquiries about the website, please contact: guolidong@genomics.cn; liyao1@genomics.cn</p>
                 <p>Powered by Element.js framework and Echarts.js library</p>
@@ -57,6 +65,28 @@ export default {
 </script>
 
 <style>
+  #header {
+    text-align: center;
+    line-height: 60px;
+    width: 100%;
+    height: 100px;
+    position: relative;
+  }
+  #header-row{
+    margin: 0 auto;
+  }
+  #header-col1 {
+    background-color: #4381e6;
+    width: 200px;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 5px;
+    line-height: 100px;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+  }
+
   .el-header {
     background-color: #e9fa2d;
     color: #333;
@@ -66,34 +96,42 @@ export default {
     height: 50%;
     position: relative;
   }
+  
+  #canvas {
+    max-width: 2000px;
+    justify-content: center;
+  }
   .el-main {
+    margin-top: 15px;
+    margin-bottom: 15px;
     background-color: #E9EEF3;
     color: #333;
     text-align: center;
     line-height: 160px;
     position: relative;
   }
-  .el-footer {
-    background-color: #B3C0D1;
-    color: #333;
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-  }
   body > .el-container {
     margin-bottom: 100px;
   }
+  
+
   .el-row {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     margin-left: 40%;
     display: flex;
     flex-wrap: wrap;
   }
+  .el-row:last-child {
+    margin-bottom: 0;
+  }
   .el-col {
     border-radius: 10px;
     z-index: 999;
+    float: left;
     margin-left: 15%;
   }
+  
+
   .bg-purple {
     background: #d3dce6;
   }
@@ -105,7 +143,17 @@ export default {
     padding: 50px 50px;
     background-color: #f9fafc;
   }
+  
+
   .footer{
-    background-color: #B3C0D1;
+    background-color: white;
+  }
+  .el-footer {
+    background-color: white;
+    color: #8b8c8f;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
   }
 </style>
