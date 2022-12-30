@@ -100,17 +100,24 @@ export default {
     min-height: 50px;
   }
   #canvas {
+    background-color: black;
     max-width: 2000px;
     justify-content: center;
+
   }
   .el-main {
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    right: 0px;
+    overflow-y: scroll;
+
     margin-top: 15px;
     margin-bottom: 15px;
-    background-color: #E9EEF3;
+    background-color: green;
     color: #333;
     text-align: center;
     line-height: 160px;
-    position: relative;
   }
   body > .el-container {
     margin-bottom: 100px;
