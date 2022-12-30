@@ -10,8 +10,8 @@
         </el-row>
     </header>
 
-
-    <el-container id='container'>
+    <div id='container'>
+    <el-container>
         <el-main>
         <div id='canvas'>
             <el-row :gutter="20">
@@ -48,6 +48,7 @@
             </div>
         </el-footer>
     </el-container>
+    </div>
 </div>
 </template>
 
@@ -69,6 +70,9 @@ export default {
 </script>
 
 <style>
+  #header {
+    position: relative;
+  }
   #header-row{
     margin: 0 auto;
     width: 100%;
@@ -99,19 +103,21 @@ export default {
     margin-right: 0%;
     min-height: 50px;
   }
+
+  #container {
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    right: 0px;
+    overflow-y: scroll;
+    height: 80%;
+  }
   #canvas {
     background-color: black;
     max-width: 2000px;
     justify-content: center;
-
   }
   .el-main {
-    position: absolute;
-    top: 200px;
-    left: 0px;
-    right: 0px;
-    overflow-y: scroll;
-
     margin-top: 15px;
     margin-bottom: 15px;
     background-color: green;
