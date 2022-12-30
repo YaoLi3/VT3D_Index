@@ -10,6 +10,7 @@
         </el-row>
     </header>
 
+
     <div id='container'>
     <el-container>
         <el-main>
@@ -40,7 +41,7 @@
             </el-row>
         </div>
         </el-main>
-       
+      
         <el-footer>
             <div class='footer'>
                 <p>For any inquiries about the website, please contact: guolidong@genomics.cn; liyao1@genomics.cn</p>
@@ -113,14 +114,14 @@ export default {
     height: 80%;
   }
   #canvas {
-    background-color: black;
     max-width: 2000px;
     justify-content: center;
+    box-shadow: 0px 0px 10px #d5d7db;
+    background-color: #f2f3f5;
   }
   .el-main {
     margin-top: 15px;
     margin-bottom: 15px;
-    background-color: green;
     color: #333;
     text-align: center;
     line-height: 160px;
