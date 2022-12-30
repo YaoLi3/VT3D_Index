@@ -19,7 +19,7 @@
 
             <el-row :gutter="20">
               <el-col :span="6">
-                <el-card shadow='hover' :body-style="{ padding: '0px' }">
+                <el-card @click.native='switchSample' shadow='hover' :body-style="{ padding: '0px' }">
                   <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
                   <div style="padding: 14px;">
                     <span><a href="/vt3d_example/L2_a/index.html?atlas=/vt3d_example/L2_a" target="_blank">L2_a</a></span>
@@ -31,7 +31,7 @@
               </el-col>
               
               <el-col :span="6">
-                <el-card shadow='hover' :body-style="{ padding: '0px' }">
+                <el-card @click.native='switchSample' shadow='hover' :body-style="{ padding: '0px' }">
                   <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
                   <div style="padding: 14px;">
                     <span><a href="/vt3d_example/L3_b/index.html?atlas=/vt3d_example/L3_b" target="_blank">L3_b</a></span> 
@@ -46,7 +46,7 @@
 
             <el-row :gutter="20">
               <el-col :span="6">
-                <el-card shadow='hover' :body-style="{ padding: '0px' }">
+                <el-card @click.native='switchSample' shadow='hover' :body-style="{ padding: '0px' }">
                   <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
                   <div style="padding: 14px;">
                     <span><a href="/vt3d_example/L1_a/index.html?atlas=/vt3d_example/L1_a" target="_blank">L1_a</a></span>
@@ -58,7 +58,7 @@
               </el-col>
               
               <el-col :span="6">
-                <el-card shadow='hover' :body-style="{ padding: '0px' }">
+                <el-card @click.native='switchSample' shadow='hover' :body-style="{ padding: '0px' }">
                   <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
                   <div style="padding: 14px;">
                     <span><a href="/vt3d_example/E16-18h/index.html?atlas=/vt3d_example/E16-18h" target="_blank">E16-18h</a></span> 
@@ -96,6 +96,7 @@ export default {
     methods: {
       switchSample(){
         // jump to a new web
+          console.log('switch sample');
       },
       jumpIntro(){
         console.log('about us');
@@ -219,11 +220,6 @@ export default {
   }
 
 
-  .time {
-    font-size: 13px;
-    color: #999;
-  }
-  
   .bottom {
     margin-top: 13px;
     line-height: 12px;
