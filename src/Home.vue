@@ -1,9 +1,12 @@
 <template>
 <div>
-    <header id='header'>
+    <header>
         <el-row id='header-row'>
           <el-col id='header-col1' :span="6">VT3D</el-col>
           <el-col id='header-col2' :span="6"><img ></el-col>
+          <el-col id='header-col3' :span="6">
+            <el-button style='font-weight:bold;color:#8b8c8f;font-size:22px;background-color:white;border-style:none;' type="primary" icon='el-icon-info' @click='jumpIntro'>About US</el-button>
+            </el-col>
         </el-row>
     </header>
 
@@ -57,21 +60,19 @@ export default {
     methods: {
       switchSample(){
         // jump to a new web
+      },
+      jumpIntro(){
+        console.log('about us');
       }
     }
 };
 </script>
 
 <style>
-  #header {
-    text-align: center;
-    line-height: 60px;
-    width: 100%;
-    height: 100px;
-    position: relative;
-  }
   #header-row{
     margin: 0 auto;
+    width: 100%;
+    position: relative;
   }
   #header-col1 {
     background-color: #4381e6;
@@ -83,6 +84,16 @@ export default {
     font-size: 50px;
     font-weight: bold;
     color: white;
+  }
+  #header-col2 {
+    margin-left: 20px;
+    width:50%;
+  }
+  #header-col3 {
+    width: 120px;
+    line-height: 100px;
+    margin-right: 0%;
+    min-height: 50px;
   }
 
   #canvas {
