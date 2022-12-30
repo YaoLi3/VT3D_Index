@@ -1,6 +1,6 @@
 <template>
 <div>
-    <header>
+    <header id='header'>
         <el-row id='header-row'>
           <el-col id='header-col1' :span="6">VT3D</el-col>
           <el-col id='header-col2' :span="6"><img ></el-col>
@@ -11,7 +11,7 @@
     </header>
 
 
-    <el-container>
+    <el-container id='container'>
         <el-main>
         <div id='canvas'>
             <el-row :gutter="20">
@@ -88,14 +88,17 @@ export default {
   #header-col2 {
     margin-left: 20px;
     width:50%;
+    display: flex;
+    flex-wrap: wrap;
   }
   #header-col3 {
+    display: flex;
+    flex-wrap: wrap; 
     width: 120px;
     line-height: 100px;
     margin-right: 0%;
     min-height: 50px;
   }
-
   #canvas {
     max-width: 2000px;
     justify-content: center;
