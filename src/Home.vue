@@ -3,7 +3,7 @@
     <header id='header'>
         <el-row id='header-row'>
           <el-col id='header-col1' :span="6">VT3D</el-col>
-          <el-col id='header-col2' :span="6"><img ></el-col>
+          <el-col id='header-col2' :span="6"><img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image"></el-col>
           <el-col id='header-col3' :span="6">
             <el-button style='font-weight:bold;color:#8b8c8f;font-size:22px;background-color:white;border-style:none;' type="primary" icon='el-icon-info' @click='jumpIntro'>About US</el-button>
             </el-col>
@@ -13,8 +13,9 @@
 
     <div id='container'>
     <el-container>
+        <el-divider content-position="left">SAMPLES</el-divider>
         <el-main>
-        <div id='canvas'>
+          <div id='canvas'>
             <el-row :gutter="20">
                 <el-col :span="6"><div class="grid-content bg-purple">
                     test1
@@ -38,6 +39,21 @@
                 <el-col :span="6"><div class="grid-content bg-purple">
                     <a href="/vt3d_example/L2_a/index.html?atlas=/vt3d_example/L2_a" target="_blank">L2_a</a > 
                 </div></el-col>
+            </el-row>
+
+            <el-row>
+              <el-col :span="6" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
+                <el-card :body-style="{ padding: '0px' }">
+                  <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
+                  <div style="padding: 14px;">
+                    <span><a href="/vt3d_example/L2_a/index.html?atlas=/vt3d_example/L2_a" target="_blank">L2_a</a></span>
+                    <div class="bottom clearfix">
+                      <time class="time">{{ currentDate }}</time>
+                      <el-button type="text" class="button">Detail</el-button>
+                    </div>
+                  </div>
+                </el-card>
+              </el-col>
             </el-row>
         </div>
         </el-main>
@@ -95,6 +111,7 @@ export default {
     width:50%;
     display: flex;
     flex-wrap: wrap;
+    height: 100px;
   }
   #header-col3 {
     display: flex;
@@ -114,6 +131,8 @@ export default {
     height: 80%;
   }
   #canvas {
+    margin-left:3%;
+    margin-right:3%;
     max-width: 2000px;
     justify-content: center;
     box-shadow: 0px 0px 10px #d5d7db;
@@ -171,5 +190,10 @@ export default {
     text-align: center;
     margin-top: 20px;
     width: 100%;
+  }
+  .el-divider__text.is-left {
+    color: #4381e6;
+    font-weight: bold;
+    font-size: 30px;
   }
 </style>
