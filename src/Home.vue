@@ -12,75 +12,47 @@
 
 
     <div id='container'>
-    <el-container>
-        <el-divider content-position="left">SAMPLES</el-divider>
+      <el-container>
+        <el-divider content-position="left">Stereo-Seq Flysta3D</el-divider>
         <el-main>
           <div id='canvas'>
 
             <el-row :gutter="20">
               <el-col :span="6">
                 <el-card @click.native='switchSample' shadow='hover' :body-style="{ padding: '0px' }">
-                  <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
-                  <div style="padding: 14px;">
+                  <img src="./assets/WT.png" class="image">
+
                     <span><a href="/vt3d_example/L2_a/index.html?atlas=/vt3d_example/L2_a" target="_blank">L2_a</a></span>
+                    
+                    
                     <div class="bottom clearfix">
-                      <el-button type="text" class="button">Detail</el-button>
+                      <el-button type="text" class="button">Tutorial</el-button>
                     </div>
-                  </div>
-                </el-card>
-              </el-col>
-              
-              <el-col :span="6">
-                <el-card @click.native='switchSample' shadow='hover' :body-style="{ padding: '0px' }">
-                  <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
-                  <div style="padding: 14px;">
-                    <span><a href="/vt3d_example/L3_b/index.html?atlas=/vt3d_example/L3_b" target="_blank">L3_b</a></span> 
-                    <div class="bottom clearfix">
-                      <el-button type="text" class="button">Detail</el-button>
-                    </div>
-                  </div>
-                </el-card>
+                  
+                
+                  </el-card>
               </el-col>
             </el-row>
-
-
-            <el-row :gutter="20">
-              <el-col :span="6">
-                <el-card @click.native='switchSample' shadow='hover' :body-style="{ padding: '0px' }">
-                  <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
-                  <div style="padding: 14px;">
-                    <span><a href="/vt3d_example/L1_a/index.html?atlas=/vt3d_example/L1_a" target="_blank">L1_a</a></span>
-                    <div class="bottom clearfix">
-                      <el-button type="text" class="button">Detail</el-button>
-                    </div>
-                  </div>
-                </el-card>
-              </el-col>
-              
-              <el-col :span="6">
-                <el-card @click.native='switchSample' shadow='hover' :body-style="{ padding: '0px' }">
-                  <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
-                  <div style="padding: 14px;">
-                    <span><a href="/vt3d_example/E16-18h/index.html?atlas=/vt3d_example/E16-18h" target="_blank">E16-18h</a></span> 
-                    <div class="bottom clearfix">
-                      <el-button type="text" class="button">Detail</el-button>
-                    </div>
-                  </div>
-                </el-card>
-              </el-col>
-            </el-row>
-
-
           </div>
-        </el-main>
+        </el-main> <!-- end of the 1st main window -->
       
+        <el-divider content-position="left">ST Human Heart 3D</el-divider>
+        <el-main>
+        </el-main> <!-- end of the 2nd main window -->
+        
+
+        <el-divider content-position="left">MERFISH Brain 3D</el-divider>
+        <el-main>
+        </el-main> <!-- end of the 3rd main window -->
+        
+
         <el-footer>
             <div class='footer'>
                 <p>For any inquiries about the website, please contact: guolidong@genomics.cn; liyao1@genomics.cn</p>
                 <p>Powered by Element.js framework and Echarts.js library</p>
             </div>
         </el-footer>
-    </el-container>
+      </el-container>
     </div>
 </div>
 </template>
@@ -208,6 +180,10 @@ export default {
     text-align: center;
     margin-top: 20px;
     width: 100%;
+  }
+  .el-divider {
+    background-color: #4381e6;
+    height: 6px;
   }
   .el-divider__text.is-left {
     color: #4381e6;
