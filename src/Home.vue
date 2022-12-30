@@ -9,8 +9,6 @@
 
 
     <el-container>
-        <!-- <el-header>VT3D</el-header> -->
-        
         <el-main>
         <div id='canvas'>
             <el-row :gutter="20">
@@ -87,16 +85,6 @@ export default {
     color: white;
   }
 
-  .el-header {
-    background-color: #e9fa2d;
-    color: #333;
-    text-align: center;
-    line-height: 60px;
-    width: 100%;
-    height: 50%;
-    position: relative;
-  }
-  
   #canvas {
     max-width: 2000px;
     justify-content: center;
