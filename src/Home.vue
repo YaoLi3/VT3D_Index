@@ -19,18 +19,14 @@
 
             <el-row :gutter="20">
               <el-col :span="6">
-                <el-card @click.native='switchSample' shadow='hover' :body-style="{ padding: '0px' }">
+                <el-card @click.native='switchSample' shadow='hover' :body-style="{padding:'0px'}">
                   <img src="./assets/WT.png" class="image">
-
+                  <div class="bottom">
                     <span><a href="/vt3d_example/L2_a/index.html?atlas=/vt3d_example/L2_a" target="_blank">L2_a</a></span>
-                    
-                    
-                    <div class="bottom clearfix">
-                      <el-button type="text" class="button">Tutorial</el-button>
-                    </div>
-                  
-                
-                  </el-card>
+                    <el-button type="text" style='font-weight:bold;font-size:22px;' class="button">Dataset</el-button>
+                    <el-button type="text" class="button" style='font-weight:bold;font-size:22px;'>Tutorial</el-button>
+                  </div>  
+                </el-card>
               </el-col>
             </el-row>
           </div>
@@ -195,15 +191,17 @@ export default {
     max-height: 105px;
   }
 
-
-  .bottom {
-    margin-top: 13px;
-    line-height: 12px;
+  .el-card {
+    width: 300px;
+    height: 250px;
   }
-
+  .bottom {
+    margin-top: 20px;
+    line-height: 5px;
+  }
   .button {
-    padding: 0;
-    float: right;
+    padding: 5px;
+    float: center;
   }
 
   .image {
