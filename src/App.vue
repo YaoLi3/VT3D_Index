@@ -28,33 +28,8 @@ export default {
      Home,
   },
   methods: {
-      InitSummary(jsondata){
-          console.log("save summary");
-          this.G_Atlas['summary'] = jsondata;
-          this.$nextTick(() => {
-              console.log("start browser");
-              this.selected = "Viewer";
-          });
-      },
   },
   mounted(){
-    var uri = window.location.search.substring(1);
-    var params = new URLSearchParams(uri);
-    var baseurl=params.get("atlas");
-    if( baseurl == null ) baseurl = ""
-    var atlas = {}
-    atlas['main_url']    = baseurl;
-    atlas['summary_url'] = baseurl + '/summary.json';
-    atlas['gene_url']    = baseurl + '/gene.json';
-    atlas['meshes_url']  = baseurl + '/meshes.json';
-    atlas['anno_url']    = baseurl + '/Anno';
-    atlas['genes_url']   = baseurl + '/Gene';
-    this.G_Atlas = atlas;
-    var self = this;
-    $.getJSON(atlas['summary_url'],function(_data) {
-        console.log("summary loaded");
-        self.InitSummary(_data);
-    });
   },
 }
 </script>

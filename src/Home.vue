@@ -1,55 +1,183 @@
 <template>
 <div>
-    <header id='header'>
-        <el-row id='header-row'>
-          <el-col id='header-col1' :span="6">VT3D</el-col>
-          <el-col id='header-col2' :span="6"><img id='header-img' src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image"></el-col>
-          <el-col id='header-col3' :span="6">
-            <el-button style='font-weight:bold;color:#8b8c8f;font-size:22px;background-color:white;border-style:none;' type="primary" icon='el-icon-info' @click='jumpIntro'>About US</el-button>
-            </el-col>
-        </el-row>
-    </header>
-
-
-    <div id='container'>
-      <el-container>
-        <el-divider content-position="left">Stereo-Seq Flysta3D</el-divider>
-        <el-main>
-          <div id='canvas'>
-
-            <el-row :gutter="20">
-              <el-col :span="6">
-                <el-card @click.native='switchSample' shadow='hover' :body-style="{padding:'0px'}">
-                  <img src="./assets/WT.png" class="image">
-                  <div class="bottom">
-                    <span><a href="/vt3d_example/L2_a/index.html?atlas=/vt3d_example/L2_a" target="_blank">L2_a</a></span>
-                    <el-button type="text" style='font-weight:bold;font-size:22px;' class="button">Dataset</el-button>
-                    <el-button type="text" class="button" style='font-weight:bold;font-size:22px;'>Tutorial</el-button>
-                  </div>  
-                </el-card>
+    <el-row>
+      <el-col id='header-col1' :span="24">VT3D a visualization toolbox</el-col>
+    </el-row>
+    <hr>
+    <h1>Developing Drosophila embryos and larvae atlas</h1>
+    <el-row>
+        <!-- card begin-->
+        <el-col :span="8">
+          <div class='card'>
+           <el-row>
+              <el-col :span="24">
+                <img src="./assets/E14.png" class="image">
               </el-col>
-            </el-row>
+           </el-row>
+           <el-row>
+              <el-col :span="24">
+                 <h2>E14-E16 embryo</h2>
+              </el-col>
+           </el-row>
+           <el-row>
+              <el-col :span="12">
+                <el-button type="text" style='font-weight:bold;font-size:22px;' class="button" @click.native="jumpE14" >Browse this data</el-button>
+              </el-col>
+              <el-col :span="12">
+                <el-button type="text" class="button" style='font-weight:bold;font-size:22px;'>Tutorial</el-button>
+              </el-col>
+           </el-row>
           </div>
-        </el-main> <!-- end of the 1st main window -->
-      
-        <el-divider content-position="left">ST Human Heart 3D</el-divider>
-        <el-main>
-        </el-main> <!-- end of the 2nd main window -->
-        
-
-        <el-divider content-position="left">MERFISH Brain 3D</el-divider>
-        <el-main>
-        </el-main> <!-- end of the 3rd main window -->
-        
-
-        <el-footer>
-            <div class='footer'>
-                <p>For any inquiries about the website, please contact: guolidong@genomics.cn; liyao1@genomics.cn</p>
-                <p>Powered by Element.js framework and Echarts.js library</p>
-            </div>
-        </el-footer>
-      </el-container>
-    </div>
+        </el-col>
+        <!-- card end-->
+        <!-- card begin-->
+        <el-col :span="8">
+          <div class='card'>
+           <el-row>
+              <el-col :span="24">
+                <img src="./assets/E16.png" class="image">
+              </el-col>
+           </el-row>
+           <el-row>
+              <el-col :span="24">
+                 <h2>E16-E18 embryo</h2>
+              </el-col>
+           </el-row>
+           <el-row>
+              <el-col :span="12">
+                <el-button type="text" style='font-weight:bold;font-size:22px;' class="button"  @click.native="jumpE16" >Browse this data</el-button>
+              </el-col>
+              <el-col :span="12">
+                <el-button type="text" class="button" style='font-weight:bold;font-size:22px;'>Tutorial</el-button>
+              </el-col>
+           </el-row>
+          </div>
+        </el-col>
+        <!-- card end-->
+        <!-- card begin-->
+        <el-col :span="8">
+          <div class='card'>
+           <el-row>
+              <el-col :span="24">
+                <img src="./assets/L1.png" class="image">
+              </el-col>
+           </el-row>
+           <el-row>
+              <el-col :span="24">
+                 <h2>L1 larve</h2>
+              </el-col>
+           </el-row>
+           <el-row>
+              <el-col :span="12">
+                <el-button type="text" style='font-weight:bold;font-size:22px;' class="button"  @click.native="jumpL1" >Browse this data </el-button>
+              </el-col>
+              <el-col :span="12">
+                <el-button type="text" class="button" style='font-weight:bold;font-size:22px;'>Tutorial</el-button>
+              </el-col>
+           </el-row>
+          </div>
+        </el-col>
+        <!-- card end-->
+    </el-row>
+    <el-row>
+        <!-- card begin-->
+        <el-col :span="12">
+          <div class='card'>
+           <el-row>
+              <el-col :span="24">
+                <img src="./assets/L2.png" class="image">
+              </el-col>
+           </el-row>
+           <el-row>
+              <el-col :span="24">
+                 <h2>L2 larva</h2>
+              </el-col>
+           </el-row>
+           <el-row>
+              <el-col :span="12">
+                <el-button type="text" style='font-weight:bold;font-size:22px;' class="button" @click.native="jumpL2"  >Browse this data</el-button>
+              </el-col>
+              <el-col :span="12">
+                <el-button type="text" class="button" style='font-weight:bold;font-size:22px;'>Tutorial</el-button>
+              </el-col>
+           </el-row>
+          </div>
+        </el-col>
+        <!-- card end-->
+        <!-- card begin-->
+        <el-col :span="12">
+          <div class='card'>
+           <el-row>
+              <el-col :span="24">
+                <img src="./assets/L3.png" class="image">
+              </el-col>
+           </el-row>
+           <el-row>
+              <el-col :span="24">
+                 <h2>L3 larva</h2>
+              </el-col>
+           </el-row>
+           <el-row>
+              <el-col :span="12">
+                <el-button type="text" style='font-weight:bold;font-size:22px;' class="button" @click.native="jumpL3"  >Browse this data</el-button>
+              </el-col>
+              <el-col :span="12">
+                <el-button type="text" class="button" style='font-weight:bold;font-size:22px;'>Tutorial</el-button>
+              </el-col>
+           </el-row>
+          </div>
+        </el-col>
+        <!-- card end-->
+    </el-row>
+    <hr>
+    <el-row>
+        <!-- card begin-->
+        <el-col :span="12">
+        <h1>Developing human heart atlas</h1>
+          <div class='card'>
+           <el-row>
+              <el-col :span="24">
+                <img src="./assets/heart.png" class="image">
+              </el-col>
+           </el-row>
+           <el-row>
+              <el-col :span="12">
+                <el-button type="text" style='font-weight:bold;font-size:22px;' class="button" @click.native="jumpHeart"  >Browse this data</el-button>
+              </el-col>
+              <el-col :span="12">
+                <el-button type="text" class="button" style='font-weight:bold;font-size:22px;'>Tutorial</el-button>
+              </el-col>
+           </el-row>
+          </div>
+        </el-col>
+        <!-- card end-->
+        <!-- card begin-->
+        <el-col :span="12">
+        <h1>Preoptic hypothalamic atlas</h1>
+          <div class='card'>
+           <el-row>
+              <el-col :span="24">
+                <img src="./assets/Hp.png" class="image">
+              </el-col>
+           </el-row>
+           <el-row>
+              <el-col :span="12">
+                <el-button type="text" style='font-weight:bold;font-size:22px;' class="button" @click.native="jumpHp"  >Browse this data</el-button>
+              </el-col>
+              <el-col :span="12">
+                <el-button type="text" class="button" style='font-weight:bold;font-size:22px;'>Tutorial</el-button>
+              </el-col>
+           </el-row>
+          </div>
+        </el-col>
+        <!-- card end-->
+    </el-row>
+    <el-footer>
+        <div class='footer'>
+            <p>For any inquiries about the website, please contact: guolidong@genomics.cn; liyao1@genomics.cn</p>
+            <p>Powered by Element.js framework and Echarts.js library</p>
+        </div>
+    </el-footer>
 </div>
 </template>
 
@@ -62,29 +190,34 @@ export default {
         }
     },
     methods: {
-      switchSample(){
-        // jump to a new web
-          console.log('switch sample');
+      jumpE14(){
+         window.location.href = '/vt3d_example/E14-16h/index.html?atlas=/vt3d_example/E14-16h';
       },
-      jumpIntro(){
-        console.log('about us');
-      }
+      jumpE16(){
+         window.location.href = '/vt3d_example/E16-18h/index.html?atlas=/vt3d_example/E16-18h';
+      },
+      jumpL1(){
+         window.location.href = '/vt3d_example/L1_a/index.html?atlas=/vt3d_example/L1_a';
+      },
+      jumpL2(){
+         window.location.href = '/vt3d_example/L2_a/index.html?atlas=/vt3d_example/L2_a';
+      },
+      jumpL3(){
+         window.location.href = '/vt3d_example/L3_b/index.html?atlas=/vt3d_example/L3_b';
+      },
+      jumpHeart(){
+         window.location.href = '/vt3d_example/HumanHeart01/index.html?atlas=/vt3d_example/HumanHeart01';
+      },
+      jumpHp(){
+         window.location.href = '/vt3d_example/hypo_preoptic/index.html?atlas=/vt3d_example/hypo_preoptic';
+      },
     }
 };
 </script>
 
 <style>
-  #header {
-    position: relative;
-  }
-  #header-row{
-    margin: 0 auto;
-    width: 100%;
-    position: relative;
-  }
   #header-col1 {
     background-color: #4381e6;
-    width: 200px;
     text-align: center;
     margin-top: 5px;
     margin-left: 5px;
@@ -93,81 +226,18 @@ export default {
     font-weight: bold;
     color: white;
   }
-  #header-col2 {
-    margin-left: 20px;
-    width:50%;
-    display: flex;
-    flex-wrap: wrap;
+  .image {
+    width: 100%;
+    display: block;
   }
-  #header-col3 {
-    display: flex;
-    flex-wrap: wrap; 
-    width: 120px;
-    line-height: 100px;
-    margin-right: 0%;
-    min-height: 50px;
-  }
-
-  #container {
-    position: absolute;
-    top: 105px;
-    left: 0px;
-    right: 0px;
-    overflow-y: scroll;
-    height: 80%;
-  }
-  #canvas {
-    margin-left:3%;
-    margin-right:3%;
-    max-width: 2000px;
-    justify-content: center;
-    box-shadow: 0px 0px 10px #d5d7db;
-    background-color: #f2f3f5;
-  }
-  .el-main {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    color: #333;
-    text-align: center;
-    line-height: 160px;
-  }
-  body > .el-container {
-    margin-bottom: 100px;
-  }
-  
-
-  .el-row {
-    margin-bottom: 20px;
-    margin-left: 40%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .el-row:last-child {
-    margin-bottom: 0;
-  }
-  .el-col {
-    border-radius: 10px;
-    z-index: 999;
-    float: left;
-    margin-left: 15%;
-  }
-  
-
-  .bg-purple {
-    background: #d3dce6;
-  }
-  .grid-content {
-    border-radius: 4px;
-    min-height: 100px;
-  }
-  .row-bg {
-    padding: 50px 50px;
-    background-color: #f9fafc;
-  }
-  
-
   .footer{
     background-color: white;
+  }
+  .card{
+     border-width: 2px;
+     border-style: solid;
+     border-color:#111111;
+     margin:10px
   }
   .el-footer {
     background-color: white;
@@ -177,45 +247,5 @@ export default {
     margin-top: 20px;
     width: 100%;
   }
-  .el-divider {
-    background-color: #4381e6;
-    height: 6px;
-  }
-  .el-divider__text.is-left {
-    color: #4381e6;
-    font-weight: bold;
-    font-size: 30px;
-  }
-  #header-img {
-    max-width: 50%;
-    max-height: 105px;
-  }
 
-  .el-card {
-    width: 300px;
-    height: 250px;
-  }
-  .bottom {
-    margin-top: 20px;
-    line-height: 5px;
-  }
-  .button {
-    padding: 5px;
-    float: center;
-  }
-
-  .image {
-    width: 100%;
-    display: block;
-  }
-
-  .clearfix:before,
-  .clearfix:after {
-      display: table;
-      content: "";
-  }
-  
-  .clearfix:after {
-      clear: both
-  }
 </style>
