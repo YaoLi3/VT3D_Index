@@ -1,30 +1,44 @@
 <template>
 <div>
     <el-row>
-      <el-col id='header-col1' :span="24">VT3D a visualization toolbox</el-col>
+      <el-col id='header-col1' :span="24">VT3D a visualization toolbox for 3D transcriptomic data</el-col>
     </el-row>
     <hr>
-    <h1>Developing Drosophila embryos and larvae atlas</h1>
+    <el-row>
+      <el-col :span="18"> 
+        <h1>Developing Drosophila embryos and larvae atlas</h1>
+      </el-col>
+      <el-col :span="6"> 
+        <h1><a href="https://doi.org/10.1016/j.devcel.2022.04.006" target="_blank"> Reference </a></h1>
+      </el-col>
+    </el-row>
     <el-row>
         <!-- card begin-->
         <el-col :span="8">
           <div class='card'>
            <el-row>
               <el-col :span="24">
-                <img src="./assets/E14.png" class="image">
+                <div @click="jumpE14" >
+                    <img src="./assets/E14.png" class="image" >
+                </div>
               </el-col>
            </el-row>
            <el-row>
-              <el-col :span="24">
+              <el-col :span="12">
                  <h2>E14-E16 embryo</h2>
               </el-col>
+              <el-col :span="12">
+                <h2><a href="/vt3d_example/E14-16h/index.html?atlas=/vt3d_example/E14-16h" target="_blank"> Browse this data </a></h2>
+              </el-col>
            </el-row>
            <el-row>
-              <el-col :span="12">
-                <el-button type="text" style='font-weight:bold;font-size:22px;' class="button" @click.native="jumpE14" >Browse this data</el-button>
-              </el-col>
-              <el-col :span="12">
-                <el-button type="text" class="button" style='font-weight:bold;font-size:22px;'>Tutorial</el-button>
+              <el-col :span="24">
+                <el-collapse>
+                    <el-collapse-item   title="Tutorial" name="1">
+                      <div>Consistent with real life: in line with the process and logic of real life, and comply with languages and habits that the users are used to;</div>
+                      <div>Consistent within interface: all elements should be consistent, such as: design style, icons and texts, position of elements, etc.</div>
+                    </el-collapse-item>
+                </el-collapse  >
               </el-col>
            </el-row>
           </div>
@@ -35,20 +49,27 @@
           <div class='card'>
            <el-row>
               <el-col :span="24">
-                <img src="./assets/E16.png" class="image">
+                <div @click="jumpE16" >
+                  <img src="./assets/E16.png" class="image">
+                </div>
               </el-col>
            </el-row>
            <el-row>
-              <el-col :span="24">
+              <el-col :span="12">
                  <h2>E16-E18 embryo</h2>
               </el-col>
+              <el-col :span="12">
+                <h2><a href="/vt3d_example/E16-18h/index.html?atlas=/vt3d_example/E16-18h" target="_blank"> Browse this data </a></h2>
+              </el-col>
            </el-row>
            <el-row>
-              <el-col :span="12">
-                <el-button type="text" style='font-weight:bold;font-size:22px;' class="button"  @click.native="jumpE16" >Browse this data</el-button>
-              </el-col>
-              <el-col :span="12">
-                <el-button type="text" class="button" style='font-weight:bold;font-size:22px;'>Tutorial</el-button>
+              <el-col :span="24">
+                <el-collapse>
+                    <el-collapse-item  title="Tutorial" name="1">
+                      <div>Consistent with real life: in line with the process and logic of real life, and comply with languages and habits that the users are used to;</div>
+                      <div>Consistent within interface: all elements should be consistent, such as: design style, icons and texts, position of elements, etc.</div>
+                    </el-collapse-item>
+                </el-collapse  >
               </el-col>
            </el-row>
           </div>
@@ -59,20 +80,27 @@
           <div class='card'>
            <el-row>
               <el-col :span="24">
-                <img src="./assets/L1.png" class="image">
+                <div @click="jumpL1" >
+                  <img src="./assets/L1.png" class="image">
+                </div>
+              </el-col>
+           </el-row>
+           <el-row>
+              <el-col :span="12">
+                 <h2>L1 larve</h2>
+              </el-col>
+              <el-col :span="12">
+                <h2><a href="/vt3d_example/L1_a/index.html?atlas=/vt3d_example/L1_a" target="_blank"> Browse this data </a></h2>
               </el-col>
            </el-row>
            <el-row>
               <el-col :span="24">
-                 <h2>L1 larve</h2>
-              </el-col>
-           </el-row>
-           <el-row>
-              <el-col :span="12">
-                <el-button type="text" style='font-weight:bold;font-size:22px;' class="button"  @click.native="jumpL1" >Browse this data </el-button>
-              </el-col>
-              <el-col :span="12">
-                <el-button type="text" class="button" style='font-weight:bold;font-size:22px;'>Tutorial</el-button>
+                <el-collapse>
+                    <el-collapse-item   title="Tutorial" name="1">
+                      <div>Consistent with real life: in line with the process and logic of real life, and comply with languages and habits that the users are used to;</div>
+                      <div>Consistent within interface: all elements should be consistent, such as: design style, icons and texts, position of elements, etc.</div>
+                    </el-collapse-item>
+                </el-collapse  >
               </el-col>
            </el-row>
           </div>
@@ -85,20 +113,27 @@
           <div class='card'>
            <el-row>
               <el-col :span="24">
-                <img src="./assets/L2.png" class="image">
+                <div @click="jumpL2" >
+                  <img src="./assets/L2.png" class="image">
+                </div>
+              </el-col>
+           </el-row>
+           <el-row>
+              <el-col :span="12">
+                 <h2>L2 larva</h2>
+              </el-col>
+              <el-col :span="12">
+                <h2><a href="/vt3d_example/L2_a/index.html?atlas=/vt3d_example/L2_a" target="_blank"> Browse this data </a></h2>
               </el-col>
            </el-row>
            <el-row>
               <el-col :span="24">
-                 <h2>L2 larva</h2>
-              </el-col>
-           </el-row>
-           <el-row>
-              <el-col :span="12">
-                <el-button type="text" style='font-weight:bold;font-size:22px;' class="button" @click.native="jumpL2"  >Browse this data</el-button>
-              </el-col>
-              <el-col :span="12">
-                <el-button type="text" class="button" style='font-weight:bold;font-size:22px;'>Tutorial</el-button>
+                <el-collapse>
+                    <el-collapse-item   title="Tutorial" name="1">
+                      <div>Consistent with real life: in line with the process and logic of real life, and comply with languages and habits that the users are used to;</div>
+                      <div>Consistent within interface: all elements should be consistent, such as: design style, icons and texts, position of elements, etc.</div>
+                    </el-collapse-item>
+                </el-collapse  >
               </el-col>
            </el-row>
           </div>
@@ -109,20 +144,27 @@
           <div class='card'>
            <el-row>
               <el-col :span="24">
-                <img src="./assets/L3.png" class="image">
+                <div @click="jumpL3" >
+                   <img src="./assets/L3.png" class="image">
+                </div>
+              </el-col>
+           </el-row>
+           <el-row>
+              <el-col :span="12">
+                 <h2>L3 larva</h2>
+              </el-col>
+              <el-col :span="12">
+                <h2><a href="/vt3d_example/L3_b/index.html?atlas=/vt3d_example/L3_b" target="_blank"> Browse this data </a></h2>
               </el-col>
            </el-row>
            <el-row>
               <el-col :span="24">
-                 <h2>L3 larva</h2>
-              </el-col>
-           </el-row>
-           <el-row>
-              <el-col :span="12">
-                <el-button type="text" style='font-weight:bold;font-size:22px;' class="button" @click.native="jumpL3"  >Browse this data</el-button>
-              </el-col>
-              <el-col :span="12">
-                <el-button type="text" class="button" style='font-weight:bold;font-size:22px;'>Tutorial</el-button>
+                <el-collapse>
+                    <el-collapse-item   title="Tutorial" name="1">
+                      <div>Consistent with real life: in line with the process and logic of real life, and comply with languages and habits that the users are used to;</div>
+                      <div>Consistent within interface: all elements should be consistent, such as: design style, icons and texts, position of elements, etc.</div>
+                    </el-collapse-item>
+                </el-collapse  >
               </el-col>
            </el-row>
           </div>
@@ -133,19 +175,35 @@
     <el-row>
         <!-- card begin-->
         <el-col :span="12">
-        <h1>Developing human heart atlas</h1>
+           <el-row>
+              <el-col :span="18"> 
+                <h1>Developing human heart atlas</h1>
+              </el-col>
+              <el-col :span="6"> 
+                <h1><a href="https://doi.org/10.1016/j.cell.2019.11.025" target="_blank"> Reference </a></h1>
+              </el-col>
+           </el-row>
           <div class='card'>
            <el-row>
               <el-col :span="24">
-                <img src="./assets/heart.png" class="image">
+                <div @click="jumpHeart" >
+                   <img src="./assets/heart.png" class="image">
+                </div>
               </el-col>
            </el-row>
            <el-row>
-              <el-col :span="12">
-                <el-button type="text" style='font-weight:bold;font-size:22px;' class="button" @click.native="jumpHeart"  >Browse this data</el-button>
+              <el-col :span="24">
+                <h2><a href="/vt3d_example/HumanHeart01/index.html?atlas=/vt3d_example/HumanHeart01" target="_blank"> Browse this data </a></h2>
               </el-col>
-              <el-col :span="12">
-                <el-button type="text" class="button" style='font-weight:bold;font-size:22px;'>Tutorial</el-button>
+           </el-row>
+           <el-row>
+              <el-col :span="24">
+                <el-collapse>
+                    <el-collapse-item   title="Tutorial" name="1">
+                      <div>Consistent with real life: in line with the process and logic of real life, and comply with languages and habits that the users are used to;</div>
+                      <div>Consistent within interface: all elements should be consistent, such as: design style, icons and texts, position of elements, etc.</div>
+                    </el-collapse-item>
+                </el-collapse  >
               </el-col>
            </el-row>
           </div>
@@ -153,25 +211,42 @@
         <!-- card end-->
         <!-- card begin-->
         <el-col :span="12">
-        <h1>Preoptic hypothalamic atlas</h1>
+           <el-row>
+              <el-col :span="18"> 
+                <h1>Preoptic hypothalamic atlas</h1>
+              </el-col>
+              <el-col :span="6"> 
+                <h1><a href="http://dx.doi.org/10.1126/science.aau5324" target="_blank"> Reference </a></h1>
+              </el-col>
+           </el-row>
           <div class='card'>
            <el-row>
               <el-col :span="24">
+                <div @click="jumpHp" >
                 <img src="./assets/Hp.png" class="image">
+                </div>
               </el-col>
            </el-row>
            <el-row>
-              <el-col :span="12">
-                <el-button type="text" style='font-weight:bold;font-size:22px;' class="button" @click.native="jumpHp"  >Browse this data</el-button>
+              <el-col :span="24">
+                <h2><a href="/vt3d_example/hypo_preoptic/index.html?atlas=/vt3d_example/hypo_preoptic" target="_blank"> Browse this data </a></h2>
               </el-col>
-              <el-col :span="12">
-                <el-button type="text" class="button" style='font-weight:bold;font-size:22px;'>Tutorial</el-button>
+           </el-row>
+           <el-row>
+              <el-col :span="24">
+                <el-collapse>
+                    <el-collapse-item   title="Tutorial" name="1">
+                      <div>Consistent with real life: in line with the process and logic of real life, and comply with languages and habits that the users are used to;</div>
+                      <div>Consistent within interface: all elements should be consistent, such as: design style, icons and texts, position of elements, etc.</div>
+                    </el-collapse-item>
+                </el-collapse  >
               </el-col>
            </el-row>
           </div>
         </el-col>
         <!-- card end-->
     </el-row>
+    <hr>
     <el-footer>
         <div class='footer'>
             <p>For any inquiries about the website, please contact: guolidong@genomics.cn; liyao1@genomics.cn</p>
@@ -191,25 +266,25 @@ export default {
     },
     methods: {
       jumpE14(){
-         window.location.href = '/vt3d_example/E14-16h/index.html?atlas=/vt3d_example/E14-16h';
+         window.open('/vt3d_example/E14-16h/index.html?atlas=/vt3d_example/E14-16h','_blank');
       },
       jumpE16(){
-         window.location.href = '/vt3d_example/E16-18h/index.html?atlas=/vt3d_example/E16-18h';
+         window.open('/vt3d_example/E16-18h/index.html?atlas=/vt3d_example/E16-18h','_blank');
       },
       jumpL1(){
-         window.location.href = '/vt3d_example/L1_a/index.html?atlas=/vt3d_example/L1_a';
+         window.open('/vt3d_example/L1_a/index.html?atlas=/vt3d_example/L1_a','_blank');
       },
       jumpL2(){
-         window.location.href = '/vt3d_example/L2_a/index.html?atlas=/vt3d_example/L2_a';
+         window.open('/vt3d_example/L2_a/index.html?atlas=/vt3d_example/L2_a','_blank');
       },
       jumpL3(){
-         window.location.href = '/vt3d_example/L3_b/index.html?atlas=/vt3d_example/L3_b';
+         window.open('/vt3d_example/L3_b/index.html?atlas=/vt3d_example/L3_b','_blank');
       },
       jumpHeart(){
-         window.location.href = '/vt3d_example/HumanHeart01/index.html?atlas=/vt3d_example/HumanHeart01';
+         window.open('/vt3d_example/HumanHeart01/index.html?atlas=/vt3d_example/HumanHeart01','_blank');
       },
       jumpHp(){
-         window.location.href = '/vt3d_example/hypo_preoptic/index.html?atlas=/vt3d_example/hypo_preoptic';
+         window.open('/vt3d_example/hypo_preoptic/index.html?atlas=/vt3d_example/hypo_preoptic','_blank');
       },
     }
 };
