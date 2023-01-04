@@ -1,6 +1,6 @@
-# VT3D Browser
+# VT3D Homepage
 
-> A web browser base Spatial Transcriptomics 3D Atlas browser
+> The simple homepage of vt3d_examples
 
 ## Environment
 
