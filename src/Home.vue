@@ -322,8 +322,8 @@
                   To reproduce this atlas&#58;<br>
                   <br>
                   1. in your terminal&#58;<br>
-                  mkdir E14_E16h<br>
-                  cd E14_E16h<br>
+                  mkdir E16_E18h<br>
+                  cd E16_E18h<br>
                   wget -c http&#58;&#47;&#47;www.bgiocean.com&#47;vt3d_example&#47;download&#47;flysta3d&#47;E16-18h_a_count_normal_stereoseq.h5ad<br>
                   wget -c http&#58;&#47;&#47;www.bgiocean.com&#47;vt3d_example&#47;download&#47;flysta3d&#47;E16-18h_a.tar.gz<br>
                   tar -xzf E16-18h_a.tar.gz<br>
