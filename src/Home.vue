@@ -101,7 +101,7 @@
                    </el-row>
                    <el-row>
                       <el-col :span="12">
-                         <h3>L1 larve</h3>
+                         <h3>L1 larva</h3>
                       </el-col>
                       <el-col :span="12">
                         <h3><a href="/vt3d_example/L1_a/index.html?atlas=/vt3d_example/L1_a" target="_blank"> Browse  </a></h3>
@@ -203,49 +203,174 @@
                 </el-col>
                 <!-- card end-->
             </el-row>
-          </el-col>
-          <el-col :span="6">
-            <div class=left_border>
+
+            <!-- 2023Mar addtion begin -->
             <el-row>
-                <!-- card begin-->
-                <el-col :span="24">
-                   <el-row>
+                <div class=upper_border>
+                    <el-row>
                       <el-col :span="24"> 
-                        <h2>Developing human heart</h2>
+                        <h2>Other Datasets</h2>
                       </el-col>
-                   </el-row>
-                  <div class='card'>
-                   <el-row>
-                      <el-col :span="24">
-                        <div @click="jumpHeart" >
-                           <img src="./assets/heart.png" class="image">
-                        </div>
-                      </el-col>
-                   </el-row>
-                   <el-row>
-                      <el-col :span="24">
-                        <h3><a href="/vt3d_example/HumanHeart01/index.html?atlas=/vt3d_example/HumanHeart01" target="_blank"> Browse </a></h3>
-                      </el-col>
-                   </el-row>
-                   <el-row>
-                      <el-col :span="24">
-                        <el-collapse>
-                            <el-collapse-item   title="Summary" name="2">
-                              <div class='tutorial'>
-                                  <p>
-                                  sample&#58; developing human heart<br>
-                                  number of slices&#58; 9<br>
-                                  number of bins&#58; 1,467<br>
-                                  number of genes&#58; 20,658<br>
-                                  number of models&#58; 10 </p>
-                              </div>
-                            </el-collapse-item>
-                        </el-collapse  >
-                      </el-col>
-                   </el-row>
+                    </el-row>
+                    <!-- card begin-->
+                    <el-col :span="8">
+                      <div class='card'>
+                       <el-row>
+                          <el-col :span="24">
+                            <div @click="jumpStar" >
+                                <img src="./assets/STARmap.png" class="image" >
+                            </div>
+                          </el-col>
+                       </el-row>
+                       <el-row>
+                          <el-col :span="12">
+                             <h3>StarMap</h3>
+                          </el-col>
+                          <el-col :span="12">
+                            <h3><a href="/vt3d_example/STARmap_3D/index.html?atlas=/vt3d_example/STARmap_3D" target="_blank"> Browse</a></h3>
+                          </el-col>
+                       </el-row>
+                       <el-row>
+                          <el-col :span="24">
+                            <el-collapse>
+                                <el-collapse-item   title="Summary" name="2">
+                                  <div class='tutorial'>
+                                      <p>
+                                      sample&#58; 14h-16h embryo of <i>drosophila</i><br> <!-- TODO: -->
+                                      number of slices&#58; 13<br>
+                                      number of bins&#58; 15,295<br>
+                                      number of genes&#58; 13,668<br>
+                                      number of models&#58; 11 </p>
+                                  </div>
+                                </el-collapse-item>
+                            </el-collapse>
+                          </el-col>
+                       </el-row>
+                      </div>
+                    </el-col>
+                    <!-- card end-->
+                    <!-- card begin-->
+                    <el-col :span="8">
+                      <div class='card'>
+                       <el-row>
+                          <el-col :span="24">
+                            <div @click="jumpSlideSeq" >
+                              <img src="./assets/slide-seq.png" class="image"> 
+                            </div>
+                          </el-col>
+                       </el-row>
+                       <el-row>
+                          <el-col :span="12">
+                             <h3>Slide-Seq</h3>
+                          </el-col>
+                          <el-col :span="12">
+                            <h3><a href="" target="_blank"> Browse </a></h3> <!-- TODO: -->
+                          </el-col>
+                       </el-row>
+                       <el-row>
+                          <el-col :span="24">
+                            <el-collapse>
+                                <el-collapse-item   title="Summary" name="2">
+                                  <div class='tutorial'> <!-- TODO: -->
+                                      <p>
+                                      sample&#58; 16h-18h embryo of <i>drosophila</i><br>
+                                      number of slices&#58; 11<br>
+                                      number of bins&#58; 14,634<br>
+                                      number of genes&#58; 12,850<br>
+                                      number of models&#58; 11 </p>
+                                  </div>
+                                </el-collapse-item>
+                            </el-collapse>
+                          </el-col>
+                       </el-row>
+                      </div>
+                    </el-col>
+                    <!-- card end-->
+                    <!-- card begin-->
+                    <el-col :span="8">
+                      <div class='card'>
+                       <el-row>
+                          <el-col :span="24">
+                            <div @click="jumpFlysta" >
+                              <img src="./assets/FLY.png" class="image">
+                            </div>
+                          </el-col>
+                       </el-row>
+                       <el-row>
+                          <el-col :span="12">
+                             <h3>Flysta3D</h3>
+                          </el-col>
+                          <el-col :span="12">
+                            <h3><a href="/vt3d_example/E16-18h_grids_t1/index.html?atlas=/vt3d_example/E16-18h_grids_t1" target="_blank"> Browse  </a></h3>
+                          </el-col>
+                       </el-row>
+                       <el-row>
+                          <el-col :span="24">
+                            <el-collapse>
+                                <el-collapse-item   title="Summary" name="2">
+                                  <div class='tutorial'> <!-- TODO: -->
+                                      <p>
+                                      sample&#58; L1 larva of <i>drosophila</i><br>
+                                      number of slices&#58; 20<br>
+                                      number of bins&#58; 17,787<br>
+                                      number of genes&#58; 13,803<br>
+                                      number of models&#58; 10 </p>
+                                  </div>
+                                </el-collapse-item>
+                            </el-collapse  >
+                          </el-col>
+                       </el-row>
+                      </div>
+                    </el-col>
+                    <!-- card end-->
                   </div>
-                </el-col>
-                <!-- card end-->
+                </el-row>
+                <!-- 2023Mar addtion end --> 
+              </el-col>
+            
+
+              <el-col :span="6">
+                <div class=left_border>
+                <el-row>
+                    <!-- card begin-->
+                    <el-col :span="24">
+                       <el-row>
+                          <el-col :span="24"> 
+                            <h2>Developing human heart</h2>
+                          </el-col>
+                       </el-row>
+                      <div class='card'>
+                       <el-row>
+                          <el-col :span="24">
+                            <div @click="jumpHeart" >
+                               <img src="./assets/heart.png" class="image">
+                            </div>
+                          </el-col>
+                       </el-row>
+                       <el-row>
+                          <el-col :span="24">
+                            <h3><a href="/vt3d_example/HumanHeart01/index.html?atlas=/vt3d_example/HumanHeart01" target="_blank"> Browse </a></h3>
+                          </el-col>
+                       </el-row>
+                       <el-row>
+                          <el-col :span="24">
+                            <el-collapse>
+                                <el-collapse-item   title="Summary" name="2">
+                                  <div class='tutorial'>
+                                      <p>
+                                      sample&#58; developing human heart<br>
+                                      number of slices&#58; 9<br>
+                                      number of bins&#58; 1,467<br>
+                                      number of genes&#58; 20,658<br>
+                                      number of models&#58; 10 </p>
+                                  </div>
+                                </el-collapse-item>
+                            </el-collapse  >
+                          </el-col>
+                       </el-row>
+                      </div>
+                    </el-col>
+                    <!-- card end-->
             </el-row>
             <el-row>
                 <!-- card begin-->
@@ -633,6 +758,15 @@ export default {
       jumpHp(){
          window.open('/vt3d_example/hypo_preoptic/index.html?atlas=/vt3d_example/hypo_preoptic','_blank');
       },
+      jumpStar(){
+         window.open('/vt3d_example/STARmap_3D/index.html?atlas=/vt3d_example/STARmap_3D','_blank');
+      },
+      jumpSlideSeq(){
+         console.log('Slide-Seq data is comming soon...');
+      },
+      jumpFlysta(){
+          window.open('/vt3d_example/E16-18h_grids_t1/index.html?atlas=/vt3d_example/E16-18h_grids_t1','_blank');
+      },
     }
 };
 </script>
@@ -680,6 +814,9 @@ export default {
   }
   .left_border{
      border-left: 3px dashed gray;
+  }
+  .upper_border{
+     border-top: 3px dashed gray;
   }
   .center-div
   {
