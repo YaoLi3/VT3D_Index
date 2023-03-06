@@ -11,7 +11,7 @@
           <el-col :span="18"> 
             <el-row>
               <el-col :span="24"> 
-                <h2>Developing <i>drosophila</i> embryos and larvae</h2>
+                <h2>Developing <i>Drosophila</i> embryos and larvae</h2>
               </el-col>
             </el-row>
             <el-row>
@@ -336,7 +336,7 @@
                     <el-col :span="24">
                        <el-row>
                           <el-col :span="24"> 
-                            <h2>Developing human heart</h2>
+                            <h2>Developing Human Heart</h2>
                           </el-col>
                        </el-row>
                       <div class='card'>
@@ -377,7 +377,7 @@
                 <el-col :span="24">
                    <el-row>
                       <el-col :span="24"> 
-                        <h2>Preoptic hypothalamic</h2>
+                        <h2>Preoptic Hypothalamic</h2>
                       </el-col>
                    </el-row>
                   <div class='card'>
