@@ -738,19 +738,19 @@ export default {
     },
     methods: {
       jumpE14(){
-         window.open('/vt3d_example/E14-16h/index.html?atlas=/vt3d_example/E14-16h','_blank');
+         window.open('/vt3d_example/E14-16h_pca/index.html?atlas=/vt3d_example/E14-16h_pca','_blank');
       },
       jumpE16(){
-         window.open('/vt3d_example/E16-18h/index.html?atlas=/vt3d_example/E16-18h','_blank');
+         window.open('/vt3d_example/E16-18h_pca/index.html?atlas=/vt3d_example/E16-18h_pca','_blank');
       },
       jumpL1(){
-         window.open('/vt3d_example/L1_a/index.html?atlas=/vt3d_example/L1_a','_blank');
+         window.open('/vt3d_example/L1_pca/index.html?atlas=/vt3d_example/L1_pca','_blank');
       },
       jumpL2(){
-         window.open('/vt3d_example/L2_a/index.html?atlas=/vt3d_example/L2_a','_blank');
+         window.open('/vt3d_example/L2_a_pca_atlas/index.html?atlas=/vt3d_example/L2_a_pca_atlas','_blank');
       },
       jumpL3(){
-         window.open('/vt3d_example/L3_b/index.html?atlas=/vt3d_example/L3_b','_blank');
+         window.open('/vt3d_example/L3_pca/index.html?atlas=/vt3d_example/L3_pca','_blank');
       },
       jumpHeart(){
          window.open('/vt3d_example/HumanHeart01/index.html?atlas=/vt3d_example/HumanHeart01','_blank');
