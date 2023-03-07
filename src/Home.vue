@@ -30,7 +30,7 @@
                          <h3>E14-16h embryo</h3>
                       </el-col>
                       <el-col :span="12">
-                        <h3><a href="/vt3d_example/E14-16h/index.html?atlas=/vt3d_example/E14-16h" target="_blank"> Browse</a></h3>
+                        <h3><a href="/vt3d_example/E14-16h_pca/index.html?atlas=/vt3d_example/E14-16h_pca" target="_blank"> Browse</a></h3>
                       </el-col>
                    </el-row>
                    <el-row>
@@ -67,7 +67,7 @@
                          <h3>E16-18h embryo</h3>
                       </el-col>
                       <el-col :span="12">
-                        <h3><a href="/vt3d_example/E16-18h/index.html?atlas=/vt3d_example/E16-18h" target="_blank"> Browse </a></h3>
+                        <h3><a href="/vt3d_example/E16-18h_pca/index.html?atlas=/vt3d_example/E16-18h_pca" target="_blank"> Browse </a></h3>
                       </el-col>
                    </el-row>
                    <el-row>
@@ -104,7 +104,7 @@
                          <h3>L1 larva</h3>
                       </el-col>
                       <el-col :span="12">
-                        <h3><a href="/vt3d_example/L1_a/index.html?atlas=/vt3d_example/L1_a" target="_blank"> Browse  </a></h3>
+                        <h3><a href="/vt3d_example/L1_pca/index.html?atlas=/vt3d_example/L1_pca" target="_blank"> Browse  </a></h3>
                       </el-col>
                    </el-row>
                    <el-row>
@@ -143,7 +143,7 @@
                          <h3>L2 larva</h3>
                       </el-col>
                       <el-col :span="12">
-                        <h3><a href="/vt3d_example/L2_a/index.html?atlas=/vt3d_example/L2_a" target="_blank"> Browse </a></h3>
+                        <h3><a href="/vt3d_example/L2_a_pca_atlas/index.html?atlas=/vt3d_example/L2_a_pca_atlas" target="_blank"> Browse </a></h3>
                       </el-col>
                    </el-row>
                    <el-row>
@@ -180,7 +180,7 @@
                          <h3>L3 larva</h3>
                       </el-col>
                       <el-col :span="12">
-                        <h3><a href="/vt3d_example/L3_b/index.html?atlas=/vt3d_example/L3_b" target="_blank"> Browse </a></h3>
+                        <h3><a href="/vt3d_example/L3_pca/index.html?atlas=/vt3d_example/L3_pca" target="_blank"> Browse </a></h3>
                       </el-col>
                    </el-row>
                    <el-row>
@@ -738,19 +738,19 @@ export default {
     },
     methods: {
       jumpE14(){
-         window.open('/vt3d_example/E14-16h/index.html?atlas=/vt3d_example/E14-16h','_blank');
+         window.open('/vt3d_example/E14-16h_pca/index.html?atlas=/vt3d_example/E14-16h_pca','_blank');
       },
       jumpE16(){
-         window.open('/vt3d_example/E16-18h/index.html?atlas=/vt3d_example/E16-18h','_blank');
+         window.open('/vt3d_example/E16-18h_pca/index.html?atlas=/vt3d_example/E16-18h_pca','_blank');
       },
       jumpL1(){
-         window.open('/vt3d_example/L1_a/index.html?atlas=/vt3d_example/L1_a','_blank');
+         window.open('/vt3d_example/L1_pca/index.html?atlas=/vt3d_example/L1_pca','_blank');
       },
       jumpL2(){
-         window.open('/vt3d_example/L2_a/index.html?atlas=/vt3d_example/L2_a','_blank');
+         window.open('/vt3d_example/L2_a_pca_atlas/index.html?atlas=/vt3d_example/L2_a_pca_atlas','_blank');
       },
       jumpL3(){
-         window.open('/vt3d_example/L3_b/index.html?atlas=/vt3d_example/L3_b','_blank');
+         window.open('/vt3d_example/L3_pca/index.html?atlas=/vt3d_example/L3_pca','_blank');
       },
       jumpHeart(){
          window.open('/vt3d_example/HumanHeart01/index.html?atlas=/vt3d_example/HumanHeart01','_blank');
